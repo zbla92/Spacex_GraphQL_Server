@@ -1,0 +1,19 @@
+{
+  "name": "space_x",
+  "version": "1.0.0",
+  "description": "Unofficial SpaceX app",
+  "main": "index.js",
+  "scripts": {
+    "node": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.4.0",
+    "nodemon": "^2.0.6"
+  }
+}
