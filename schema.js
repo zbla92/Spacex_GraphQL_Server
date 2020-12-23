@@ -17,10 +17,12 @@ const LaunchType = new GraphQLObjectType({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
     date_unix: { type: GraphQLInt },
+    upcoming: { type: GraphQLBoolean },
     details: { type: GraphQLString },
     success: { type: GraphQLBoolean },
     rocket: { type: GraphQLString },
     cores: { type: GraphQLList(CoresType) },
+    links: { type: LaunchFlightLinks },
   }),
 });
 
@@ -46,6 +48,14 @@ const RocketType = new GraphQLObjectType({
     cost_per_launch: { type: GraphQLInt },
     success_rate_pct: { type: GraphQLInt },
     description: { type: GraphQLString },
+  }),
+});
+
+// Cores Type
+const LaunchFlightLinks = new GraphQLObjectType({
+  name: 'Links',
+  fields: () => ({
+    youtube_id: { type: GraphQLString },
   }),
 });
 
